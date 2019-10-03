@@ -114,7 +114,7 @@ body {
 
 /*This is a customized horizontal rule inside jumbotron */
 .customhr {
-	border-color: #ffd7c9 !important;
+	border-color: #f49e70 !important;
 	width: 80%;
 }
 
@@ -267,7 +267,7 @@ body {
 
 	/*This is a customized horizontal rule inside jumbotron */
 	.customhr {
-		border-color: #ffd7c9 !important;
+		border-color: #f49e70 !important;
 		width: 100%;
 	}
 }
