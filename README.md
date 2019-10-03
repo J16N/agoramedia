@@ -1,5 +1,5 @@
-# Agoramedia
- Hello, welcome to the Agoramedia repository.
+# AgoraMedia
+ Hello, welcome to the AgoraMedia repository.
  I made this repository to create a smooth workflow within us.
  If you like our work,you can definitely star it.
  
