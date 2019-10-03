@@ -30,11 +30,16 @@ body {
 .jumbotron {
 	margin-top: 5vh !important;
 	text-align: center;
+	background: url('images/banner-edited.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-color: #e45722 !important;
 }
 
 .display-3 {
 	font-weight: bold !important;
-	color: #f49e70 !important;
+	color: #ffd7c9 !important;
 	overflow: hidden;
 	border-right: .15em solid #f49e70;
 	white-space: nowrap;
@@ -53,20 +58,64 @@ body {
 
 
 #mysearch input {
-	background-color: #e9ecef !important;
+	background-color: transparent !important;
 	border-top-left-radius: 50px !important;
 	border-bottom-left-radius: 50px !important;
 	padding-left: 1.5vw !important;
+	border-color: #f49e70 !important;
+	color: #ffff !important;
 }
 
-#mysearch:hover input, #mysearch:hover .search-icon, .btn-custom {
-	border-color: #f49e70 !important;
+#mysearch:hover input, .btn-custom {
+	border-color: #ffff !important;
 }
 
 
 #mysearch input:focus, .btn-custom:focus {
+	border-color: #ffff !important;
+	box-shadow: 0 0 0 0.2rem rgb(255, 255, 255, 0.25) !important;
+	color: #ffff !important;
+}
+
+
+#mysearch input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: #ffd7c9 !important;
+  opacity: 1; /* Firefox */
+}
+
+#mysearch input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #ffd7c9 !important;
+}
+
+#mysearch input::-ms-input-placeholder { /* Microsoft Edge */
+  color: #ffd7c9 !important;
+}
+
+
+.btn-search {
+	border-top-right-radius: 50px !important;
+	border-bottom-right-radius: 50px !important;
+	color: #ffff !important;
 	border-color: #f49e70 !important;
-	box-shadow: 0 0 0 0.2rem rgb(244, 158, 112, 0.25) !important;
+}
+
+
+.btn-search:hover {
+	background-color: #ffff !important;
+	color: #e45722 !important;
+}
+
+
+.btn-search:focus {
+	border-color: #ffff !important;
+	box-shadow: 0 0 0 0.2rem rgb(255, 255, 255, 0.25) !important;
+}
+
+
+/*This is a customized horizontal rule inside jumbotron */
+.customhr {
+	border-color: #ffd7c9 !important;
+	width: 80%;
 }
 
 
@@ -215,6 +264,12 @@ body {
 	#cardSecond {
 		height: 85vh !important;
 	}
+
+	/*This is a customized horizontal rule inside jumbotron */
+	.customhr {
+		border-color: #ffd7c9 !important;
+		width: 100%;
+	}
 }
 
 
@@ -240,7 +295,7 @@ body {
 	padding-left: 1.5vw;
 }
 
-#newsletter:hover input, #newsletter:hover .search-icon, .btn-custom {
+#newsletter:hover input, .btn-custom {
 	border-color: #f49e70 !important;
 }
 
