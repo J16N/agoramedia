@@ -1,7 +1,7 @@
 body {
 	margin: 0;
 	border: 0;
-	overflow-x: hidden;	
+	overflow-x: hidden;
 }
 
 
@@ -35,6 +35,15 @@ body {
 .display-3 {
 	font-weight: bold !important;
 	color: #f49e70 !important;
+	overflow: hidden;
+   border-right: .15em solid #f49e70;
+   white-space: nowrap;
+   margin: 0 auto;
+   letter-spacing: .1em;
+   animation:
+     typing 3.75s steps(40, end),
+     blink-caret .8s step-end infinite;
+	  display: inline-flex;
 }
 
 
@@ -132,7 +141,7 @@ body {
 		border-top-left-radius: 50px !important;
 		border-bottom-left-radius: 50px !important;
 		padding-left: 5vw !important;
-		margin-left: 3%; 
+		margin-left: 3%;
 	}
 
 	#scrollbg1 {
@@ -384,4 +393,14 @@ footer {
 
 input, input:focus {
 	color: #ec5a09 !important;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 720px }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #f49e70; }
 }
