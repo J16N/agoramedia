@@ -39,6 +39,7 @@ body {
 
 .display-3 {
 	font-weight: bold !important;
+	font-size: 5vw !important;
 	color: #ffd7c9 !important;
 	overflow: hidden;
 	border-right: .15em solid #f49e70;
@@ -48,7 +49,7 @@ body {
 	animation:
 		typing 3.75s steps(40, end),
 		blink-caret .8s step-end infinite;
-		display: inline-flex;
+	display: inline-flex;
 }
 
 
@@ -450,10 +451,9 @@ input, input:focus {
 	color: #ec5a09 !important;
 }
 
-
 @keyframes typing {
 	from { width: 0 }
-	to { width: 720px }
+	to { width: 48vw}
 }
 
 
