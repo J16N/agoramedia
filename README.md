@@ -1,7 +1,7 @@
-<h1 align="center"> AgoraMedia </h1>
+<h1 align="center"> AGORA Media </h1>
 <h3 align="center">Reset The Router</h3><br>
 
-Hello, welcome to the AgoraMedia repository.
+Hello, welcome to the AGORA Media repository.
 I made this repository to create a smooth workflow within us.
 If you like our work, you can definitely star it.
 
