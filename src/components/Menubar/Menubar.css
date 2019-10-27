@@ -1,0 +1,58 @@
+.ant-menu-horizontal {
+	border-bottom: none !important;
+}
+
+.ant-menu-horizontal .ant-menu-item-selected, .ant-menu-horizontal .ant-menu-item-active {
+	border-bottom: none !important;
+}
+
+.ant-menu-horizontal .ant-menu-item {
+	padding: 0px 5px;
+	border-bottom: none;
+}
+
+.ant-menu-horizontal .ant-menu-item-selected a {
+	color: yellow !important;
+}
+
+.agora-menu {
+	background-color: #e45722;
+	float: right;
+}
+
+.agora-menu li a {
+	color: white !important;
+	padding: 10px 15px;
+}
+
+.agora-menu li a:hover {
+	color: white !important;
+	vertical-align: center !important;
+}
+
+.agora-menu:hover a {
+	color: #f49e70 !important;
+}
+
+.header {
+	padding: 0 20px;
+	overflow: hidden;
+	background-color: #e45722;
+}
+
+.agora_logo {
+	width: 11%;
+	padding-top: 0.5%;
+	float: left;
+}
+
+@media (max-width: 768px) {
+	.agora-menu-lg {
+		display: none;
+	}
+
+	.agora_logo {
+		width: 90%;
+		text-align: center;
+	}
+}
