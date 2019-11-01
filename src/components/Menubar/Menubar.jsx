@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classnames from "classnames";
 import { Menu, Icon, Drawer, Button } from 'antd';
 import './Menubar.css'
 
@@ -34,11 +35,61 @@ const AgoraMenu = () => {
 	);
 }
 
+const getScrollPercent = () => {
+	var h = document.documentElement, b = document.body,
+		st = 'scrollTop', sh = 'scrollHeight';
+
+	return (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
+}
+
 
 class Menubar extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			prevScrollpos: getScrollPercent(),
+			invisible: true,
+			fixed: false
+		};
+	}
+
+	handleScroll = () => {
+		const {prevScrollpos} = this.state;
+		const currentScrollPos = getScrollPercent();
+		const invisible = prevScrollpos < currentScrollPos;
+		const device = window.screen.width > window.screen.height ? 10: 25;
+		const fixed = currentScrollPos > device;
+
+		this.setState({
+			prevScrollpos: currentScrollPos,
+			invisible,
+			fixed
+		});
+	}
+
+	componentDidMount() {
+		window.addEventListener('load', () => {this.setState({invisible: false})})
+		window.addEventListener('scroll', this.handleScroll);
+	}
+
+	componentWillUnmount() {
+		window.removeEventListener('scroll', this.handleScroll);
+	}
+
 	render() {
 		return (
-			<nav className="header">
+			<nav className = {
+				classnames(
+					"header",
+					{
+						"header-hidden": this.state.invisible
+					},
+					{
+						"header-fixed": this.state.fixed
+					}
+				)
+			}>
 				<div className="agora_logo">
 					<a href="">
 						<img src={require('../../images/agora-edited.png')} width="150" height="50" alt="AGORA" />

@@ -38,6 +38,18 @@
 	padding: 0 20px;
 	overflow: hidden;
 	background-color: #e45722;
+	width: 100%;
+	top: 0;
+	transition: top 0.6s;
+	z-index: 1000;
+}
+
+.header-hidden {
+	top: -50px;
+}
+
+.header-fixed {
+	position: fixed;
 }
 
 .agora_logo {
