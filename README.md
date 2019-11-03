@@ -12,5 +12,3 @@ Please follow these rules before you contribute or request new features.
 * Put comments while you are adding or editing something in the codebase.
 * Use tabs instead of space. Make sure the tab is 2 spaced.
 * While requesting new features, make sure it is not previously requested. Same thing goes with the issues.
-* During committing, always use present tense as a summary instead of past tense. For example,
-if you changed the background color, put "Change background color to ..." instead of "Changed background color to ...".
