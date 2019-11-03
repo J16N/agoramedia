@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import classnames from "classnames";
 import { Menu, Icon, Drawer, Button } from 'antd';
 import './Menubar.css'
+import {Agora} from '../Images/Images'
 
 
 const AgoraMenu = () => {
@@ -92,7 +93,7 @@ class Menubar extends Component {
 			}>
 				<div className="agora_logo">
 					<a href="">
-						<img src={require('../../images/agora-edited.png')} width="150" height="50" alt="AGORA" />
+						<Agora width={window.screen.width > window.screen.height ? "57%": "40%"} height="100%" />
 					</a>
 				</div>
 				<div className="agora-menu-lg">

@@ -31,7 +31,7 @@
 .card-container .ant-tabs-card .ant-tabs-bar .ant-tabs-tab-active {
 	border-color: #ba4f28;
 	border-bottom-color: #fff;
-	background: #fff;
+	background: transparent;
 	color: #ba4f28;
 }
 

@@ -83,3 +83,9 @@ h1 {
 		padding-left: 5vw;
 	}
 }
+
+@media (max-width: 768px) {
+	.jumbotron {
+		background-size: cover;
+	}
+}
