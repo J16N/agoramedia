@@ -7,10 +7,7 @@ import {Agora} from '../Images/Images'
 
 const AgoraMenu = () => {
 	return (
-		<Menu mode="horizontal" className="agora-menu" defaultSelectedKeys={["home"]}>
-			<Menu.Item key="home">
-				<a href="">Home</a>
-			</Menu.Item>
+		<Menu mode="horizontal" className="agora-menu" defaultSelectedKeys={[""]}>
 			<Menu.Item key="identities">
 				<a href="">Identities</a>
 			</Menu.Item>
@@ -90,7 +87,10 @@ class Menubar extends Component {
 						"header-fixed": this.state.fixed
 					}
 				)
-			}>
+			}
+			onMouseEnter = {() => {this.setState({invisible: false})}}
+			onMouseLeave = {() => {this.setState({invisible: true})}}
+			>
 				<div className="agora_logo">
 					<a href="">
 						<Agora width={window.screen.width > window.screen.height ? "57%": "40%"} height="100%" />

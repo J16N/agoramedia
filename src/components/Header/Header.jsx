@@ -8,7 +8,7 @@ class Header extends Component {
 	render() {
 		return (
 			<div className="jumbotron">
-				<h1>Reset The Router.</h1>
+				<h1>{this.props.title}</h1>
 				<Divider />
 				<Search placeholder="Search" size="large" />
 			</div>

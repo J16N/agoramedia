@@ -8,8 +8,10 @@ class Agoramedia extends Component {
 	render () {
 		return (
 			<>
-				<Menubar />
-				<Header />
+				<div style={{"backgroundColor": "#e45722"}}>
+					<Menubar />
+					<Header title="Reset The Router." />
+				</div>
 				<Content />
 				<Footer />
 			</>

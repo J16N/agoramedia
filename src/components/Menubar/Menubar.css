@@ -16,7 +16,7 @@
 }
 
 .agora-menu {
-	background-color: #e45722;
+	background: transparent;
 	float: right;
 }
 
@@ -31,13 +31,13 @@
 }
 
 .agora-menu:hover a {
-	color: #f49e70 !important;
+	color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .header {
 	padding: 0 20px;
 	overflow: hidden;
-	background-color: #e45722;
+	background-color: rgba(228, 87, 34, 0.6);
 	width: 100%;
 	top: 0;
 	transition: top 0.6s;
