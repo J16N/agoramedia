@@ -53,8 +53,8 @@
 }
 
 .agora_logo {
-	width: 15%;
-	padding-top: 1%;
+	width: 10%;
+	padding-top: 0.5%;
 	float: left;
 }
 
@@ -66,6 +66,6 @@
 	.agora_logo {
 		width: 90%;
 		text-align: center;
-		padding: 3% 0;
+		padding: 1.5% 0;
 	}
 }

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import classnames from "classnames";
 import { Menu, Icon, Drawer, Button } from 'antd';
 import './Menubar.css'
-import {Agora} from '../Images/Images'
 
 
 const AgoraMenu = () => {
@@ -34,9 +33,12 @@ const AgoraMenu = () => {
 }
 
 const getScrollPercent = () => {
-	var h = document.documentElement, b = document.body,
-		st = 'scrollTop', sh = 'scrollHeight';
-
+	var h = document.documentElement, b = document.body, st = 'scrollTop', sh = 'scrollHeight';
+	/*h[st] and b[st] = number of pixels the content is scrolled vertically
+		h[sh] and b[sh] = entire height and width of an element, including padding
+		h.clientHeight = viewable height of an element in pixels, including padding, 
+			but not the border, scrollbar or margin.
+	*/
 	return (h[st] || b[st]) / ((h[sh] || b[sh]) - h.clientHeight) * 100;
 }
 
@@ -93,7 +95,7 @@ class Menubar extends Component {
 			>
 				<div className="agora_logo">
 					<a href="">
-						<Agora width={window.screen.width > window.screen.height ? "57%": "40%"} height="100%" />
+						<img src={require('../../images/agora.svg')} width="100" height="50" alt="AGORA" />
 					</a>
 				</div>
 				<div className="agora-menu-lg">

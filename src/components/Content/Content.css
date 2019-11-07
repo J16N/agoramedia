@@ -102,10 +102,9 @@
 	border-right: none;
 }
 
-.scroll-bg-1 {
+.scroll-bg {
 	width: 100%;
 	height: 130vh;
-	background-image: url('../../images/bg-scroll.png');
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -114,7 +113,6 @@
 	align-items: center;
 	justify-content: center;
 	position: relative;
-	margin: 10% 0 !important;
 }
 
 .img-text {
@@ -172,21 +170,6 @@
 	padding-top: 56.25%;
 }
 
-.scroll-bg-2 {
-	width: 100%;
-	height: 130vh;
-	background-image: url('../../images/bg-scroll2.jpg');
-	background-attachment: fixed;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	display: flex;
-	align-items: center;
-	justify-content:center;
-	position: relative;
-	margin-top: 10%;
-}
-
 
 
 @media (max-width: 768px) {
@@ -211,7 +194,7 @@
 		width: 60% !important;
 	}
 
-	.scroll-bg-1, .scroll-bg-2 {
+	.scroll-bg {
 		height: 50vh;
 	}
 

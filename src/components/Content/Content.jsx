@@ -162,7 +162,12 @@ class Content extends Component {
 					</Form>
 				</div>
 
-				<div className='scroll-bg-1'>
+				<div className='scroll-bg' style={
+					{
+						'backgroundImage': 'url(' + require('../../images/bg-scroll.png') + ')',
+						'margin': '10% 0'
+					}
+				}>
 					<img src={require('../../images/bg-fixed.jpg')} style={{maxWidth: '100%', height: 'auto'}} />
 					<div className="img-text">
 						<a 
@@ -202,7 +207,12 @@ class Content extends Component {
 				</div>
 
 
-				<div className='scroll-bg-2'>
+				<div className='scroll-bg' style={
+					{
+						'backgroundImage': 'url(' + require('../../images/bg-scroll2.jpg') + ')',
+						'marginTop': '10%'
+					}
+				}>
 					<div className='embed-responsive embed-responsive-16by9'>
 						<iframe className="embed-responsive-item" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?visual=true&amp;url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F461014011&amp;show_artwork=true&amp;callback=YUI.Env.JSONP.yui_3_17_2_1_1533138991002_92518&amp;wmode=opaque" />
 					</div>
