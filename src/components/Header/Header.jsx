@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Icon, Input, Divider } from 'antd';
-import './Header.css'
+import './Header.css';
 
 const { Search } = Input;
 

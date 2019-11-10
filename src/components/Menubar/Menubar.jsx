@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import classnames from "classnames";
 import { Menu, Icon, Drawer, Button } from 'antd';
-import './Menubar.css'
+import './Menubar.css';
 
 
 const AgoraMenu = () => {
@@ -69,7 +69,7 @@ class Menubar extends Component {
 	}
 
 	componentDidMount() {
-		window.addEventListener('load', () => {this.setState({invisible: false})})
+		window.addEventListener('load', () => {this.setState({invisible: false})});
 		window.addEventListener('scroll', this.handleScroll);
 	}
 

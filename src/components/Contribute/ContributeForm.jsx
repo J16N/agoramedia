@@ -11,7 +11,7 @@ const hasErrors = fieldsError => {
 class ContributeForm extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {checked: true}
+		this.state = {checked: true};
 	}
 
 	componentDidMount() {
