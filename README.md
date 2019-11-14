@@ -28,4 +28,4 @@ If you don't have it installed, you can download it from [here](https://nodejs.o
 * From your browser go to `http://localhost:3000` and there you go.
 * If you need to stop the development server, do `CTRL+C` (or `CMD+C` for Mac users) in the terminal.
 
-***This is the development version. Might be unstable.***
+***This is in development. Might be unstable.***
