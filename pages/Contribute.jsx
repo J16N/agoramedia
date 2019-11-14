@@ -1,20 +1,13 @@
-import React, {Component} from 'react';
-import { Divider } from 'antd';
-import Menubar from '../Menubar/Menubar';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import ContributeForm from './ContributeForm'
-import './Contribute.css';
+import React, {Component} from 'react'
+import { Divider } from 'antd'
+import MainLayout from '../layouts/main'
+import ContributeForm from '../components/ContributeForm'
+import styles from '../styles/contributeStyle'
 
 class Contribute extends Component {
 	render () {
 		return (
-			<>
-				<div style={{"backgroundColor": "#e45722"}}>
-					<Menubar />
-					<Header title="Join Us." />
-				</div>
-				
+			<MainLayout headerText="Join Us">
 				<div className="contribute-content">
 					<h2>What does becoming a contributor entail?</h2>
 					<p>
@@ -75,7 +68,7 @@ class Contribute extends Component {
 					</p>
 
 					<div className="topics" style={{'padding': '5% 0 3% 0'}}>
-						<img src={require("../../images/topics.svg")} style={
+						<img src="/images/topics.svg" style={
 							{
 								'float': 'left',
 								'width': '35%',
@@ -99,7 +92,7 @@ class Contribute extends Component {
 					<Divider className="space" />
 
 					<div className="guidelines" style={{'padding': '3% 0 5% 0'}}>
-						<img src={require("../../images/guidelines.svg")} style={
+						<img src="/images/guidelines.svg" style={
 							{
 								'float': 'right',
 								'width': '40%',
@@ -136,9 +129,10 @@ class Contribute extends Component {
 							</ul>
 						</div>
 					</div>
+
+					<style jsx>{styles}</style>
 				</div>
-				<Footer />
-			</>
+			</MainLayout>
 		)
 	}
 }

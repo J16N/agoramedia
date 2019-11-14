@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
-import { Form, Input, Button, Row, Col, Switch } from 'antd';
-import './ContributeForm.css';
+import React, {Component} from 'react'
+import { Form, Input, Button, Row, Col, Switch } from 'antd'
+import styles from '../styles/contributeFormStyle'
 
 const {TextArea} = Input;
 
@@ -160,7 +160,7 @@ class ContributeForm extends Component {
 					this.state.checked
 					?"Share and paste link(s) here after uploading to Google Drive, Dropbox, or another \
 						file storage service."
-					:"Please explain why you are unable to submit a work sample at this time."
+					:"Explain why you are unable to submit a work sample at this time."
 				}
 				validateStatus={workSampleError?'error': ''} help={workSampleError||''}
 				>
@@ -205,6 +205,8 @@ class ContributeForm extends Component {
 						SUBMIT
 					</Button>
 				</Form.Item>
+
+				<style jsx>{styles}</style>
 			</Form>
 		)
 	}

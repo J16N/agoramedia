@@ -1,6 +1,7 @@
-import React, {Component} from 'react';
-import { Tabs, Carousel, Card, Icon, Divider, Input, Button, Form } from 'antd';
-import './Content.css';
+import React, {Component} from 'react'
+import { Tabs, Carousel, Card, Icon, Divider, Input, Button, Form } from 'antd'
+import MainLayout from '../layouts/main'
+import styles from '../styles/indexStyle'
 
 const { TabPane } = Tabs;
 const { Meta } = Card;
@@ -9,7 +10,7 @@ const { Group } = Input;
 var carouselSettings_1 = {
 	dots: false,
 	autoplay: true,
-	autoplaySpeed: 2000,
+	autoplaySpeed: 4000,
 	pauseOnHover: true,
 	slidesToShow: 3,
 	slidesToScroll: 3,
@@ -42,69 +43,69 @@ var carouselSettings_2 = {
 class Content extends Component {
 	render() {
 		return (
-			<>
+			<MainLayout headerText="Reset The Router">
 				<div className="card-container">
 					<Tabs type="card" tabBarGutter={20}>
 						<TabPane tab="FEATURES" key="features">
 							<Carousel {...carouselSettings_1}>
 				
-								<Card cover={<img src={require("../../images/features/feature1.jpg")} />}>
+								<Card cover={<img src="/images/features/feature1.jpg" />}>
 									<Meta 
 									title="" 
 									description='' 
 									/>
 								</Card>
 
-								<Card cover={<img src={require("../../images/features/feature2.png")} />}>
+								<Card cover={<img src="/images/features/feature2.png" />}>
 									<Meta 
 									title="" 
 									description='' 
 									/>
 								</Card>
 
-								<Card cover={<img src={require("../../images/features/feature3.jpg")} />}>
+								<Card cover={<img src="/images/features/feature3.jpg" />}>
 									<Meta 
 									title="" 
 									description='' 
 									/>
 								</Card>
 
-								<Card cover={<img src={require("../../images/features/feature4.jpg")} />}>
+								<Card cover={<img src="/images/features/feature4.jpg" />}>
 									<Meta 
 									title="" 
 									description='' 
 									/>
 								</Card>
 
-								<Card cover={<img src={require("../../images/features/feature5.jpg")} />}>
+								<Card cover={<img src="/images/features/feature5.jpg" />}>
 									<Meta 
 									title="" 
 									description='' 
 									/>
 								</Card>
 
-								<Card cover={<img src={require("../../images/features/feature6.jpg")} />}>
+								<Card cover={<img src="/images/features/feature6.jpg" />}>
 									<Meta 
 									title="" 
 									description='' 
 									/>
 								</Card>
 
-								<Card cover={<img src={require("../../images/features/feature7.jpg")} />}>
+								<Card cover={<img src="/images/features/feature7.jpg" />}>
 									<Meta 
 									title="" 
 									description='' 
 									/>
 								</Card>
 
-								<Card cover={<img src={require("../../images/features/feature8.jpg")} />}>
+								<Card cover={<img src="/images/features/feature8.jpg" />}>
 									<Meta 
 									title="" 
 									description='' 
 									/>
 								</Card>
 
-								<Card cover={<img src={require("../../images/features/feature9.jpg")} />}>
+								<Card cover={<img src="/images/features/feature9.jpg" />}>
 									<Meta 
 									title="" 
 									description='' 
@@ -117,28 +118,28 @@ class Content extends Component {
 						<TabPane tab="STORIES" key="stories">
 							<Carousel {...carouselSettings_2}>
 
-								<Card cover={<img src={require("../../images/stories/stories1.jpeg")} />}>
+								<Card cover={<img src="/images/stories/stories1.jpg" />}>
 									<Meta 
 									title="" 
 									description='' 
 									/>
 								</Card>
 
-								<Card cover={<img src={require("../../images/stories/stories2.jpg")} />}>
+								<Card cover={<img src="/images/stories/stories2.jpg" />}>
 									<Meta 
 									title="" 
 									description='' 
 									/>
 								</Card>
 
-								<Card cover={<img src={require("../../images/stories/stories3.jpg")} />}>
+								<Card cover={<img src="/images/stories/stories3.jpg" />}>
 									<Meta 
 									title="" 
 									description='' 
 									/>
 								</Card>
 
-								<Card cover={<img src={require("../../images/stories/stories4.jpg")} />}>
+								<Card cover={<img src="/images/stories/stories4.jpg" />}>
 									<Meta 
 									title="" 
 									description='' 
@@ -164,11 +165,11 @@ class Content extends Component {
 
 				<div className='scroll-bg' style={
 					{
-						'backgroundImage': 'url(' + require('../../images/bg-scroll.png') + ')',
+						'backgroundImage': 'url("/images/bg-scroll.png")',
 						'margin': '10% 0'
 					}
 				}>
-					<img src={require('../../images/bg-fixed.jpg')} style={{maxWidth: '100%', height: 'auto'}} />
+					<img src='/images/bg-fixed.jpg' style={{maxWidth: '100%', height: 'auto'}} />
 					<div className="img-text">
 						<a 
 						href=""
@@ -209,15 +210,17 @@ class Content extends Component {
 
 				<div className='scroll-bg' style={
 					{
-						'backgroundImage': 'url(' + require('../../images/bg-scroll2.jpg') + ')',
+						'backgroundImage': "url('/images/bg-scroll2.jpg')",
 						'marginTop': '10%'
 					}
 				}>
 					<div className='embed-responsive embed-responsive-16by9'>
-						<iframe className="embed-responsive-item" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?visual=true&amp;url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F461014011&amp;show_artwork=true&amp;callback=YUI.Env.JSONP.yui_3_17_2_1_1533138991002_92518&amp;wmode=opaque" />
+						<iframe className="embed-responsive-item" scrolling="no" frameBorder="0" src="https://w.soundcloud.com/player/?visual=true&amp;url=https%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F461014011&amp;show_artwork=true&amp;callback=YUI.Env.JSONP.yui_3_17_2_1_1533138991002_92518&amp;wmode=opaque" />
 					</div>
 				</div>
-			</>
+
+				<style jsx>{styles}</style>
+			</MainLayout>
 
 		)
 	}
