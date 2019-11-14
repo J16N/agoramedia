@@ -8,18 +8,19 @@ If you like our work, you can definitely star it.
 If you're a non-coder then you can request feature. Or if you find issues then you can report it here.
 If you're someone new to github then please move around and explore what github has to offer you.
 
-<h2>Contribute</h2>
+## Contribute
 Please follow these rules before you contribute or request new features.
+<br>
 
 * Put comments while you are adding or editing something in the codebase.
 * Use tabs instead of space. Make sure the tab is 2 spaced.
 * While requesting new features, make sure it is not previously requested. Same thing goes with the issues.
 
-<h2>Requirement</h2>
+## Requirement
 In order to run this project, you need node.js installed in your system.<br>
 If you don't have it installed, you can download it from [here](https://nodejs.org/en/).
 
-<h2>How to install</h2>
+## How to install
 
 * Clone this repository.
 * In the root directory, open your terminal and do `npm install`.
