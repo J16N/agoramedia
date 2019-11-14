@@ -15,8 +15,6 @@ Please follow these rules before you contribute or request new features.
 * Use tabs instead of space. Make sure the tab is 2 spaced.
 * While requesting new features, make sure it is not previously requested. Same thing goes with the issues.
 
-***This is the development version. Might be unstable.***
-
 <h2>Requirement</h2>
 In order to run this project, you need node.js installed in your system.<br>
 If you don't have it installed, you can download it from [here](https://nodejs.org/en/).
@@ -28,3 +26,5 @@ If you don't have it installed, you can download it from [here](https://nodejs.o
 * After you have installed everything, do `npm run dev`and wait for the development server to start.
 * From your browser go to `http://localhost:3000` and there you go.
 * If you need to stop the development server, do `CTRL+C` (or `CMD+C` for Mac users) in the terminal.
+
+***This is the development version. Might be unstable.***
