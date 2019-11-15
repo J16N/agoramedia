@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Divider } from 'antd'
-import MainLayout from '../layouts/main'
+import MainLayout from '../layouts/mainLayout'
 import ContributeForm from '../components/ContributeForm'
 import styles from '../styles/contributeStyle'
 
@@ -39,7 +39,7 @@ class Contribute extends Component {
 						<em>To become a contributor, please apply through the form below.</em>
 					</p>
 
-					<ContributeForm />
+					<div className='form'><ContributeForm /></div>
 
 					<Divider className="space" />
 
@@ -67,7 +67,7 @@ class Contribute extends Component {
 						publication. Following publication, all rights revert back to the contributor.
 					</p>
 
-					<div className="topics" style={{'padding': '5% 0 3% 0'}}>
+					<div className="topics">
 						<img src="/images/topics.svg" style={
 							{
 								'float': 'left',
@@ -91,7 +91,7 @@ class Contribute extends Component {
 
 					<Divider className="space" />
 
-					<div className="guidelines" style={{'padding': '3% 0 5% 0'}}>
+					<div className="guidelines">
 						<img src="/images/guidelines.svg" style={
 							{
 								'float': 'right',

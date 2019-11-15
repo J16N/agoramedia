@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Meta from '../components/Meta'
-import NextNProgress from '../components/NextNProgress'
+import PageLoader from '../components/PageLoader'
 import Menubar from '../components/Menubar'
 import Footer from '../components/Footer'
 import { Icon, Input, Divider } from 'antd'
@@ -16,8 +16,7 @@ export default class MainLayout extends Component {
 	}
 
 	componentDidMount() {
-		const offsetHeight = this.header.current.offsetHeight;
-		this.setState({height: offsetHeight});
+		this.setState({height: this.header.current.offsetHeight});
 	}
 
 	render() {
@@ -26,7 +25,7 @@ export default class MainLayout extends Component {
 				<Meta title={ this.props.headerText } />
 
 				<div ref={this.header} style={{"backgroundColor": "#e45722"}}>
-					<NextNProgress />
+					<PageLoader />
 					<Menubar height={this.state.height} />
 					
 					<div className="jumbotron">

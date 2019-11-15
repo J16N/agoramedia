@@ -76,7 +76,7 @@ class ContributeForm extends Component {
 		};
 
 		return (
-			<Form {...formItemLayout} onSubmit={this.handleSubmit} style={{'marginTop': '5%'}} className="form">
+			<Form {...formItemLayout} onSubmit={this.handleSubmit} style={{'marginTop': '5%'}}>
 				<Form.Item label="Full Name" validateStatus={fullnameError?'error': ''} help={fullnameError||''} 
 				className="custom-form-items">
 					{getFieldDecorator('fullname', {

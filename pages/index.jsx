@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import { Tabs, Carousel, Card, Icon, Divider, Input, Button, Form } from 'antd'
-import MainLayout from '../layouts/main'
+import MainLayout from '../layouts/mainLayout'
 import styles from '../styles/indexStyle'
 
 const { TabPane } = Tabs;
@@ -151,8 +151,6 @@ class Content extends Component {
 					</Tabs>
 				</div>
 
-				<Divider />
-
 				<div className="content">
 					<p className="newsletter">SUBSCRIBE TO THE NEWSLETTER</p>
 					<Form layout="inline">
@@ -210,7 +208,7 @@ class Content extends Component {
 
 				<div className='scroll-bg' style={
 					{
-						'backgroundImage': "url('/images/bg-scroll2.jpg')",
+						'backgroundImage': "url('/images/bg-scroll2.png')",
 						'marginTop': '10%'
 					}
 				}>

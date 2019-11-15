@@ -21,7 +21,7 @@ export default css`
 		letter-spacing: 0.07em;
 	}
 
-	:global(.ant-divider-horizontal) {
+	:global(.jumbotron .ant-divider-horizontal) {
 		min-width: 0 !important;
 		width: 80%;
 		background-color: #f49e70;
@@ -73,7 +73,7 @@ export default css`
 	}
 
 	@media (max-width: 768px) {
-		:global(.ant-divider-horizontal) {
+		:global(.jumbotron .ant-divider-horizontal) {
 			width: 100%;
 		}
 

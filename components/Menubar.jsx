@@ -107,6 +107,15 @@ class Menubar extends Component {
 		window.removeEventListener('scroll', this.handleScroll);
 	}
 
+	shouldComponentUpdate(nextState) {
+		var {fixed, invisible} = this.state;
+		if (fixed || !fixed) {
+			if (invisible === nextState.invisible)
+				return false
+		}
+		return true
+	}
+
 	render() {
 		return (
 			<nav className='header'
@@ -128,7 +137,7 @@ class Menubar extends Component {
 				<style jsx>{`
 					.header {
 						position: ${this.state.fixed ? 'fixed' : ''};
-						top: ${this.state.invisible ? '-8' : '0'}%;
+						top: ${this.state.invisible ? '-2.85' : '0'}rem;
 					}
 				`}</style>
 			</nav>
