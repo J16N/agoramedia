@@ -26,7 +26,7 @@ class About extends Component {
 					<p>
 						We’re a youth-led, international media startup that explores global issues and cultural trends 
 						through a uniquely interdisciplinary means. Cinematic arts, music, photography, theater, visual 
-						arts, writing—the possibilities are endless! Centered on a mission to <b><em>#resettherouter</em></b> 
+						arts, writing—the possibilities are endless! Centered on a mission to <b><em>#resettherouter </em></b>
 						to restore connectivity between individuals, disciplines, and ideologies, our members transcend 
 						frontiers daily by pioneering innovative solutions to create a brighter, more connected future.
 					</p>

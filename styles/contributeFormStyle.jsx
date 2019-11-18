@@ -28,7 +28,13 @@ export default css`
 		color: #f49e70;
 	}
 
-	.custom-form-items {
+	:global(.custom-form-items) {
 		margin-bottom: 3%;
+	}
+
+	@media (max-width: 768px) {
+		:global(.form) {
+			padding: 0 5% 0 5%;
+		}
 	}
 `

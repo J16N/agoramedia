@@ -110,10 +110,4 @@ export default css`
 			display: none;
 		}
 	}
-
-	@media (max-width: 768px) {
-		.form {
-			padding: 0 5% 0 5%;
-		}
-	}
 `

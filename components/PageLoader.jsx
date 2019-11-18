@@ -21,7 +21,7 @@ export default class PageLoader extends Component {
 		this.progress = setInterval(() => {
 			var { percent } = this.state;
 			
-			if (percent > 80) {
+			if ((percent > 80) && (percent < 90)) {
 				percent += ((Math.random() * 5) + 1);
 			} else if (percent > 90) {
 				percent += (Math.random() + 1);
@@ -30,15 +30,14 @@ export default class PageLoader extends Component {
 			}
 
 			this.setState({percent: percent, display: "inline-block", isloading: true});
-		}, (Math.random() * 5000) + 1000);
+		}, (Math.random() * 5000) + 2000);
 	}
 
 
 	routeChangeEnd = url => {
 		console.log(`Destination: ${url}`);
 		clearInterval(this.progress);
-		this.setState({percent: 100});
-		//setTimeout(() => {this.setState({display: "none"})} , 6000)
+		this.setState({percent: 15});
 	}
 
 

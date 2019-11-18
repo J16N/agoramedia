@@ -48,7 +48,7 @@ const AgoraMenu = () => {
 			</Menu.Item>
 			
 			<Menu.Item key="contact">
-				<Link href="">
+				<Link href="/contact">
 					<a>Contact</a>
 				</Link>
 			</Menu.Item>
