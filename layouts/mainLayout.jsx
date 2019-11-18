@@ -9,6 +9,8 @@ import styles from '../styles/mainLayoutStyle'
 const { Search } = Input;
 
 export default class MainLayout extends Component {
+	_isMounted = false;
+
 	constructor(props) {
 		super(props);
 		this.header = React.createRef();
@@ -16,7 +18,14 @@ export default class MainLayout extends Component {
 	}
 
 	componentDidMount() {
-		this.setState({height: this.header.current.offsetHeight});
+		this._isMounted = true;
+
+		if (this._isMounted)
+			this.setState({height: this.header.current.offsetHeight});
+	}
+
+	componentWillUnmount() {
+		this._isMounted = false;
 	}
 
 	render() {
@@ -24,22 +33,24 @@ export default class MainLayout extends Component {
 			<>
 				<Meta title={ this.props.headerText } />
 
-				<div ref={this.header} style={{"backgroundColor": "#e45722"}}>
-					<PageLoader />
-					<Menubar height={this.state.height} />
-					
-					<div className="jumbotron">
-						<h1>{ this.props.headerText }</h1>
-						<Divider />
-						<Search placeholder="Search" size="large" />
+				<PageLoader />
 
-						<style jsx>{styles}</style>
+				<div className="fade-on-load">
+					<div ref={this.header} style={{"backgroundColor": "#e45722"}}>
+						<Menubar height={this.state.height} />
+						<div className="jumbotron">
+							<h1>{ this.props.headerText }</h1>
+							<Divider />
+							<Search placeholder="Search" size="large" />
+
+							<style jsx>{styles}</style>
+						</div>
 					</div>
+
+					{ this.props.children }
+
+					<Footer />
 				</div>
-
-				{ this.props.children }
-
-				<Footer />
 			</>
 		)
 	}

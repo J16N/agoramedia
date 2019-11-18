@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import classnames from "classnames"
-import { Menu, Icon, Drawer, Button } from 'antd'
+import { Menu } from 'antd'
 import styles from '../styles/menubarStyle'
 
 
@@ -16,31 +16,37 @@ const AgoraMenu = () => {
 					<a>Identities</a>
 				</Link>
 			</Menu.Item>
-			<Menu.Item key="features">
-				<Link href="">
-					<a>Features</a>
-				</Link>
-			</Menu.Item>
+			
 			<Menu.Item key="stories">
 				<Link href="">
 					<a>Stories</a>
 				</Link>
 			</Menu.Item>
+			
 			<Menu.Item key="reviews">
 				<Link href="">
 					<a>Reviews</a>
 				</Link>
 			</Menu.Item>
+			
 			<Menu.Item key="resources">
 				<Link href="">
 					<a>Resources</a>
 				</Link>
 			</Menu.Item>
+			
 			<Menu.Item key="contribute">
 				<Link href="/contribute">
 					<a>Contribute</a>
 				</Link>
 			</Menu.Item>
+
+			<Menu.Item key="about">
+				<Link href="/about">
+					<a>About</a>
+				</Link>
+			</Menu.Item>
+			
 			<Menu.Item key="contact">
 				<Link href="">
 					<a>Contact</a>
@@ -118,7 +124,7 @@ class Menubar extends Component {
 
 	render() {
 		return (
-			<nav className='header'
+			<nav className='menubar'
 			onMouseEnter = {() => {this.setState({invisible: false})}}
 			onMouseLeave = {() => {this.setState({invisible: true})}}
 			>
@@ -135,7 +141,7 @@ class Menubar extends Component {
 
 				{/*dynamic styles*/}
 				<style jsx>{`
-					.header {
+					.menubar {
 						position: ${this.state.fixed ? 'fixed' : ''};
 						top: ${this.state.invisible ? '-2.85' : '0'}rem;
 					}

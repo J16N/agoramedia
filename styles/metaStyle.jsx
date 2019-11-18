@@ -9,4 +9,17 @@ export default css`
 		line-height: 1.5;
 		height: 100%;
 	}
+
+	:global(.space) {
+		min-width: 0 !important;
+		width: 80%;
+		background-color: #f49e70;
+		margin: 4% auto;
+	}
+
+	@media (max-width: 768px) {
+		:global(.space) {
+			width: 100%;
+		}
+	}
 `

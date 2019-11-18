@@ -8,11 +8,13 @@ export default class PageLoader extends Component {
 		super(props);
 
 		this.state = {
-			percent: 15,
+			percent: 0,
 			display: "none",
+			isloading: false
 		}
 	}
 
+	
 	routeChangeStart = url => {
 		console.log(`Changing to: ${url}`);
 		
@@ -22,14 +24,12 @@ export default class PageLoader extends Component {
 			if (percent > 80) {
 				percent += ((Math.random() * 5) + 1);
 			} else if (percent > 90) {
-				percent += ((Math.random() * 3) + 1);
-			} else if (percent > 95) {
 				percent += (Math.random() + 1);
 			} else {
 				percent += ((Math.random() * 20) + 1);
 			}
 
-			this.setState({percent: percent, display: "inline-block"});
+			this.setState({percent: percent, display: "inline-block", isloading: true});
 		}, (Math.random() * 5000) + 1000);
 	}
 
@@ -46,6 +46,9 @@ export default class PageLoader extends Component {
 		Router.events.on('routeChangeStart', this.routeChangeStart);
 		Router.events.on('routeChangeComplete', this.routeChangeEnd);
 		Router.events.on('routeChangeError', this.routeChangeEnd);
+		Router.events.on('beforeHistoryChange', this.routeChangeStart);
+		Router.events.on('hashChangeStart', this.routeChangeStart);
+		Router.events.on('hashChangeComplete', this.routeChangeEnd);
 
 		return (
 			<>
@@ -61,6 +64,10 @@ export default class PageLoader extends Component {
 				<style jsx>{`
 					:global(.ant-progress) {
 						display: ${this.state.display};
+					}
+
+					:global(.fade-on-load) {
+						opacity: ${this.state.isloading ? 0.5 : 1};
 					}
 				`}</style>
 			</>

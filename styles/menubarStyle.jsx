@@ -1,15 +1,16 @@
 import css from 'styled-jsx/css'
 
 export default css`
-	:global(.ant-menu-horizontal) {
+	:global(.ant-menu-horizontal, .ant-menu-submenu-horizontal) {
 		border-bottom: none !important;
 	}
 
-	:global(.ant-menu-horizontal .ant-menu-item-selected, .ant-menu-horizontal .ant-menu-item-active) {
+	:global(.ant-menu-horizontal .ant-menu-item-selected, .ant-menu-horizontal .ant-menu-item-active, 
+	.ant-menu-horizontal .ant-menu-submenu-active) {
 		border-bottom: none !important;
 	}
 
-	:global(.ant-menu-horizontal .ant-menu-item) {
+	:global(.ant-menu-horizontal .ant-menu-item, .ant-menu-horizontal .ant-menu-submenu-horizontal) {
 		padding: 0px 5px;
 		border-bottom: none;
 	}
@@ -23,21 +24,36 @@ export default css`
 		float: right;
 	}
 
-	:global(.agora-menu li a) {
+	:global(.agora-menu li a, .agora-menu li div) {
 		color: white !important;
 		padding: 10px 15px;
 	}
 
-	:global(.agora-menu li a:hover) {
+	:global(.agora-menu li a:hover, .agora-menu li div:hover) {
 		color: white !important;
-		vertical-align: center !important;
 	}
 
-	:global(.agora-menu:hover a) {
+	:global(.agora-menu:hover a, .agora-menu:hover div) {
 		color: rgba(255, 255, 255, 0.5) !important;
 	}
 
-	.header {
+	:global(.ant-menu-submenu .ant-menu) {
+		background-color: transparent;
+	}
+
+	:global(.ant-menu-submenu-popup) {
+		background: rgba(228, 87, 34, 0.6);
+	}
+
+	:global(.ant-menu-submenu .ant-menu:hover li a) {
+		color: rgba(255, 255, 255, 0.5);
+	}
+
+	:global(.ant-menu-submenu .ant-menu li a, .ant-menu-submenu .ant-menu li a:hover) {
+		color: rgba(255, 255, 255, 1.0);
+	}
+
+	.menubar {
 		padding: 0 20px;
 		overflow: hidden;
 		background-color: rgba(228, 87, 34, 0.6);

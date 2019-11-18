@@ -40,7 +40,7 @@ var carouselSettings_2 = {
 	features.push(<Card cover={<img src={require(src)} />}><Meta title="" description='' /></Card>)
 }*/
 
-class Content extends Component {
+class Index extends Component {
 	render() {
 		return (
 			<MainLayout headerText="Reset The Router">
@@ -224,4 +224,4 @@ class Content extends Component {
 	}
 }
 
-export default Content;
+export default Index;

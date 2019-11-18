@@ -111,19 +111,6 @@ export default css`
 		}
 	}
 
-	:global(.contribute-content .ant-divider-horizontal) {
-		min-width: 0 !important;
-		width: 80%;
-		background-color: #f49e70;
-		margin: 4% auto;
-	}
-
-	@media (max-width: 768px) {
-		:global(.contribute-content .ant-divider-horizontal) {
-			width: 100%;
-		}
-	}
-
 	@media (max-width: 768px) {
 		.form {
 			padding: 0 5% 0 5%;
