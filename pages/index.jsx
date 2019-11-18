@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import Link from 'next/link'
 import { Tabs, Carousel, Card, Icon, Divider, Input, Button, Form } from 'antd'
 import MainLayout from '../layouts/mainLayout'
 import styles from '../styles/indexStyle'
@@ -169,20 +170,21 @@ class Index extends Component {
 				}>
 					<img src='/images/bg-fixed.jpg' style={{maxWidth: '100%', height: 'auto'}} />
 					<div className="img-text">
-						<a 
-						href=""
-						style={
-							{
-								fontSize: '3.5rem',
-								fontWeight: 'bold',
-								lineHeight: '1.2',
-								color: 'white',
+						<Link href="/about">
+							<a
+							style={
+								{
+									fontSize: '3.5rem',
+									fontWeight: 'bold',
+									lineHeight: '1.2',
+									color: 'white',
 
+								}
 							}
-						}
-						>
-							CONNECTIVITY IS DESTINY.
-						</a>
+							>
+								CONNECTIVITY IS DESTINY.
+							</a>
+						</Link>
 						<Divider style={{backgroundColor: 'white', width: '80%'}} />
 						<h3
 						style={{letterSpacing: '10px', fontWeight: 'bold', color: 'white', fontSize: '1.75rem'}}
