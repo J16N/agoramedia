@@ -46,7 +46,7 @@ class Index extends Component {
 			<MainLayout headerText="Reset The Router">
 				<div className="card-container">
 					<Tabs type="card" tabBarGutter={20}>
-						<TabPane tab="FEATURES" key="features">
+						<TabPane tab="FEATURED" key="features">
 							<Carousel {...carouselSettings_1}>
 				
 								<Card cover={<img src="/images/features/feature1.jpg" />}>
