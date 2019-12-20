@@ -1,75 +1,162 @@
 import React, { Component } from 'react'
 import Router from "next/router"
-import { Progress } from 'antd'
-import styles from '../styles/pageLoaderStyle'
+import NProgress from 'nprogress'
+import PropTypes from 'prop-types'
 
-export default class PageLoader extends Component {
+/* eslint-disable react/prefer-stateless-function */
+class PageLoader extends Component {
 	constructor(props) {
 		super(props);
 
 		this.state = {
-			percent: 0,
-			display: "none",
-			isloading: false
+			isLoading: false
 		}
 	}
 
-	
-	routeChangeStart = url => {
-		console.log(`Changing to: ${url}`);
-		
-		this.progress = setInterval(() => {
-			var { percent } = this.state;
-			
-			if ((percent > 80) && (percent < 90)) {
-				percent += ((Math.random() * 5) + 1);
-			} else if (percent > 90) {
-				percent += (Math.random() + 1);
-			} else {
-				percent += ((Math.random() * 20) + 1);
-			}
+	static defaultProps = {
+		color: '#29D',
+		startPosition: 0.3,
+		stopDelayMs: 200,
+		height: 5,
+	};
 
-			this.setState({percent: percent, display: "inline-block", isloading: true});
-		}, (Math.random() * 5000) + 2000);
-	}
+	timer = null;
 
+	routeChangeStart = () => {
+		NProgress.set(this.props.startPosition);
+		this.setState({isLoading: true})
+		NProgress.start();
+	};
 
-	routeChangeEnd = url => {
-		console.log(`Destination: ${url}`);
-		clearInterval(this.progress);
-		this.setState({percent: 15});
-	}
+	routeChangeEnd = () => {
+		clearTimeout(this.timer);
+		this.timer = setTimeout(() => {
+			NProgress.done(true);
+			this.setState({isLoading: false})
+		}, this.props.stopDelayMs);
+	};
 
+	componentDidMount() {
+		const { options } = this.props;
 
-	render() {
+		if (options) {
+			NProgress.configure(options);
+		}
+
 		Router.events.on('routeChangeStart', this.routeChangeStart);
 		Router.events.on('routeChangeComplete', this.routeChangeEnd);
 		Router.events.on('routeChangeError', this.routeChangeEnd);
-		Router.events.on('beforeHistoryChange', this.routeChangeStart);
-		Router.events.on('hashChangeStart', this.routeChangeStart);
-		Router.events.on('hashChangeComplete', this.routeChangeEnd);
+	}
+
+	render() {
+		const { color, height } = this.props;
 
 		return (
 			<>
-				<Progress
-				percent={this.state.percent}
-				status="active"
-				strokeWidth={4}
-				showInfo={false}
-				strokeColor='#a8411c'
-				/>
-
-				<style jsx>{styles}</style>
-				<style jsx>{`
-					:global(.ant-progress) {
-						display: ${this.state.display};
+				<style jsx global>{`
+					#nprogress {
+						pointer-events: none;
 					}
 
-					:global(.fade-on-load) {
-						opacity: ${this.state.isloading ? 0.5 : 1};
+					#nprogress .bar {
+						position: fixed;
+						z-index: 1031;
+						top: 0;
+						left: 0;
+						width: 100%;
+						border-right-radius: 50px;
+					}
+
+					#nprogress .peg {
+						display: none;
+						position: absolute;
+						right: 0px;
+						width: 100px;
+						height: 100%;
+						opacity: 1;
+						-webkit-transform: rotate(3deg) translate(0px, -4px);
+						-ms-transform: rotate(3deg) translate(0px, -4px);
+						transform: rotate(3deg) translate(0px, -4px);
+					}
+
+					#nprogress .spinner {
+						display: "block";
+						position: fixed;
+						z-index: 1031;
+						top: 15px;
+						right: 15px;
+					}
+
+					#nprogress .spinner-icon {
+						width: 18px;
+						height: 18px;
+						box-sizing: border-box;
+						border: solid 2px transparent;
+						border-radius: 50%;
+						-webkit-animation: nprogresss-spinner 400ms linear infinite;
+						animation: nprogress-spinner 400ms linear infinite;
+					}
+
+					.nprogress-custom-parent {
+						overflow: hidden;
+						position: relative;
+					}
+
+					.nprogress-custom-parent #nprogress .spinner,
+					.nprogress-custom-parent #nprogress .bar {
+						position: absolute;
+					}
+
+					@-webkit-keyframes nprogress-spinner {
+						0% {
+							-webkit-transform: rotate(0deg);
+						}
+						100% {
+							-webkit-transform: rotate(360deg);
+						}
+					}
+					
+					@keyframes nprogress-spinner {
+						0% {
+							transform: rotate(0deg);
+						}
+						100% {
+							transform: rotate(360deg);
+						}
+					}
+				`}</style>
+				
+				<style jsx global>{`
+					#nprogress .bar {
+						background: ${color};
+						height: ${height}px;
+					}
+
+					#nprogress .peg {
+						box-shadow: 0 0 10px ${color}, 0 0 5px ${color};
+					}
+
+					#nprogress .spinner-icon {
+						border-top-color: ${color};
+						border-left-color: ${color};
+					}
+				`}</style>
+				
+				<style jsx global>{`
+					.fade-on-load {
+						opacity: ${this.state.isLoading ? 0.5 : 1};
 					}
 				`}</style>
 			</>
 		)
 	}
 }
+
+PageLoader.propTypes = {
+	color: PropTypes.string,
+	startPosition: PropTypes.number,
+	stopDelayMs: PropTypes.number,
+	options: PropTypes.object,
+};
+
+export default PageLoader;

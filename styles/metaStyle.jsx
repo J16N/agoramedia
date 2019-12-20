@@ -8,6 +8,7 @@ export default css`
 		font-weight: 400;
 		line-height: 1.5;
 		height: 100%;
+		box-sizing: border-box;
 	}
 
 	:global(.space) {

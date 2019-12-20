@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Meta from '../components/Meta'
-import PageLoader from '../components/PageLoader'
 import Menubar from '../components/Menubar'
 import Footer from '../components/Footer'
 import { Icon, Input, Divider } from 'antd'
@@ -32,8 +31,6 @@ export default class MainLayout extends Component {
 		return (
 			<>
 				<Meta title={ this.props.headerText } />
-
-				<PageLoader />
 
 				<div className="fade-on-load">
 					<div ref={this.header} style={{"backgroundColor": "#e45722"}}>

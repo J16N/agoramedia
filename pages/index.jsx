@@ -1,8 +1,9 @@
 import React, {Component} from 'react'
 import Link from 'next/link'
-import { Tabs, Carousel, Card, Icon, Divider, Input, Button, Form } from 'antd'
+import { Button, Card, Carousel, Divider, Form, Icon, Input, Tabs } from 'antd'
 import MainLayout from '../layouts/mainLayout'
 import styles from '../styles/indexStyle'
+
 
 const { TabPane } = Tabs;
 const { Meta } = Card;

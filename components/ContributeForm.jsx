@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import { Form, Input, Button, Row, Col, Switch } from 'antd'
+import { Button, Col, Form, Input, Row, Switch } from 'antd'
 import styles from '../styles/contributeFormStyle'
 
 const {TextArea} = Input;
