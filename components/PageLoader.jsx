@@ -67,8 +67,27 @@ class PageLoader extends Component {
 						border-right-radius: 50px;
 					}
 
+					#nprogress .bar::after {
+						content: '';
+						opacity: 0;
+						position: absolute;
+						top: 0;
+						right: 0;
+						bottom: 0;
+						left: 0;
+						background: #fff;
+						border-right-radius: 50px;
+						animation: animate-shine 1s ease-out infinite;
+					}
+
+					@keyframes animate-shine {
+						0% {opacity: 0; width: 0;}
+						50% {opacity: 0.5;}
+						100% {opacity: 0; width: 100%;}
+					}
+
 					#nprogress .peg {
-						display: none;
+						display: block;
 						position: absolute;
 						right: 0px;
 						width: 100px;
