@@ -14,7 +14,7 @@ Please follow these rules before you contribute or request new features.
 
 * Put comments while you are adding or editing something in the codebase.
 * Use tabs instead of space. Make sure the tab is 2 spaced.
-* While requesting new features, make sure it is not previously requested. Same thing goes with the issues.
+* While requesting new features, make sure it is not previously requested. Same thing applies while reporting the issues.
 
 ## Requirement
 In order to run this project, you need node.js installed in your system.<br>
@@ -28,4 +28,4 @@ If you don't have it installed, you can download it from [here](https://nodejs.o
 * From your browser go to `http://localhost:3000` and there you go.
 * If you need to stop the development server, do `CTRL+C` (or `CMD+C` for Mac users) in the terminal.
 
-***This is in development. Might be unstable.***
+***The website is in development. Might be unstable.***
