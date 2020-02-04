@@ -68,19 +68,6 @@ export default css`
 		border-right: none;
 	}
 
-	:global(.newsletter-inp::placeholder) {
-		color: #f49e70;
-		opacity: 1;
-	}
-
-	:global(.newsletter-inp:-ms-input-placeholder) {
-		color: #f49e70;
-	}
-
-	:global(.newsletter-inp::-ms-input-placeholder) {
-		color: #f49e70;
-	}
-
 	:global(.newsletter-btn) {
 		border-top-right-radius: 50px !important;
 		border-bottom-right-radius: 50px !important;

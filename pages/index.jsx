@@ -51,63 +51,63 @@ class Index extends Component {
 						<TabPane tab="FEATURED" key="features">
 							<Carousel {...carouselSettings_1}>
 				
-								<Card cover={<img src="/images/features/feature1.jpg" />}>
+								<Card cover={<img src="/images/features/feature1.jpg" />} hoverable={true}>
 									<Meta 
 									title="" 
 									description='' 
 									/>
 								</Card>
 
-								<Card cover={<img src="/images/features/feature2.png" />}>
+								<Card cover={<img src="/images/features/feature2.png" />} hoverable={true}>
 									<Meta 
 									title="" 
 									description='' 
 									/>
 								</Card>
 
-								<Card cover={<img src="/images/features/feature3.jpg" />}>
+								<Card cover={<img src="/images/features/feature3.jpg" />} hoverable={true}>
 									<Meta 
 									title="" 
 									description='' 
 									/>
 								</Card>
 
-								<Card cover={<img src="/images/features/feature4.jpg" />}>
+								<Card cover={<img src="/images/features/feature4.jpg" />} hoverable={true}>
 									<Meta 
 									title="" 
 									description='' 
 									/>
 								</Card>
 
-								<Card cover={<img src="/images/features/feature5.jpg" />}>
+								<Card cover={<img src="/images/features/feature5.jpg" />} hoverable={true}>
 									<Meta 
 									title="" 
 									description='' 
 									/>
 								</Card>
 
-								<Card cover={<img src="/images/features/feature6.jpg" />}>
+								<Card cover={<img src="/images/features/feature6.jpg" />} hoverable={true}>
 									<Meta 
 									title="" 
 									description='' 
 									/>
 								</Card>
 
-								<Card cover={<img src="/images/features/feature7.jpg" />}>
+								<Card cover={<img src="/images/features/feature7.jpg" />} hoverable={true}>
 									<Meta 
 									title="" 
 									description='' 
 									/>
 								</Card>
 
-								<Card cover={<img src="/images/features/feature8.jpg" />}>
+								<Card cover={<img src="/images/features/feature8.jpg" />} hoverable={true}>
 									<Meta 
 									title="" 
 									description='' 
 									/>
 								</Card>
 
-								<Card cover={<img src="/images/features/feature9.jpg" />}>
+								<Card cover={<img src="/images/features/feature9.jpg" />} hoverable={true}>
 									<Meta 
 									title="" 
 									description='' 
